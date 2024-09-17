@@ -23,10 +23,12 @@ for towers in range(num_tower):
         if floor % 3 == 2:
             if color == "gray":
                 color == "blue"
-            if color == "blue":
-                color == "green"
-            if color == "green":
-                color == "gray"
+            else:
+                if color == "blue":
+                    color == "green"
+                else:
+                    if color == "green":
+                        color == "gray"
         y = y + 5  # location of next floor
 
         # draw the floor
