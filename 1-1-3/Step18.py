@@ -12,9 +12,13 @@ x = -150
 y = -150
 
 # height of tower and a counter for each floor
-num_floors = 63
-color = "gray"
+# number of towers
+num_tower = int(input("How many towers would you like to make?"))
 
+# height of tower and a counter for each floor
+num_floors = int(input("How many floors would you like?"))
+
+color = "gray"
 # iterate
 for floor in range(num_floors):
     # set placement and color of turtle
