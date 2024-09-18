@@ -32,7 +32,7 @@ for floor in range(num_floors):
     if floor % 21 == 20:
         painter.penup()
         x = x + 100
-        y = -150
+        y = -155
     painter.color(color)
     y = y + 5  # location of next floor
 
