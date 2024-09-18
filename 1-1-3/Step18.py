@@ -13,10 +13,10 @@ y = -150
 
 # height of tower and a counter for each floor
 # number of towers
-num_tower = int(input("How many towers would you like to make?"))
+num_tower = 3
 
 # height of tower and a counter for each floor
-num_floors = int(input("How many floors would you like?"))
+num_floors = 63
 
 color = "gray"
 # iterate
@@ -29,7 +29,10 @@ for floor in range(num_floors):
             color = "blue"
         else:
             color = "gray"
-
+    if floor % 21 == 20:
+        painter.penup()
+        x = x + 100
+        y = -150
     painter.color(color)
     y = y + 5  # location of next floor
 
