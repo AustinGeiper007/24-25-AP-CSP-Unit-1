@@ -2,7 +2,7 @@ import turtle as trtl
 painter = trtl.Turtle()
 painter.speed(0)
 
-# Virus Ball thing?
+# Virus Ball thing? IDEK I messed around and found out
 step = 1
 turn = 1
 
