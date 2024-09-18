@@ -7,7 +7,7 @@ painter.pensize(5)
 # starting location of the tower
 x = -150
 y = -150
-color = "gray"
+
 # number of towers
 num_tower = int(input("How many towers would you like to make?"))
 
@@ -21,14 +21,9 @@ for towers in range(num_tower):
         painter.penup()
         painter.goto(x, y)
         if floor % 3 == 2:
-            if color == "gray":
-                color == "blue"
-            else:
-                if color == "blue":
-                    color == "green"
-                else:
-                    if color == "green":
-                        color == "gray"
+            painter.color("red")
+        else:
+            painter.color("blue")
         y = y + 5  # location of next floor
 
         # draw the floor
