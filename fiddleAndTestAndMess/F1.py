@@ -6,7 +6,7 @@ painter.speed(0)
 step = 1
 turn = 1
 
-for step in range(0, 185):
+for step in range(0, 180):
     painter.forward(step)
     step = step + 1
     painter.left(turn)
