@@ -15,4 +15,4 @@ elif grade < 64 and grade >= 0:
 elif grade < 0:
     print("How? How did you get a negative grade? That's not supposed to be possible")
 else:
-    print("You got an invalid grade/This was not a number")
+    print("You got an invalid grade/This isn't a number")
