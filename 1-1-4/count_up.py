@@ -6,6 +6,6 @@ total = 0
 while total + 11 <= 852:
     total = total + 11
 
-print("Your total is" + str(total))
+print("Your total is: " + str(total))
 print("Which is as high as you can go")
 print("counting by 11, without exceeding 852")
