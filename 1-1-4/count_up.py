@@ -1,10 +1,8 @@
-# Selected numbers for this example are 11 and 852
-#Challenge: Write a while loop that counts up to 852 but not over, by 11
-
 total = 0
-
-while total + 11 <= 852:
-    total += 11
+increment = int(input("Enter a increment to increase by: "))
+Goal = int(input("Enter a goal to increase to: "))
+while total + increment <= 852:
+    total += increment
 
 print("Your total is: " + str(total))
 print("Which is as high as you can go")
