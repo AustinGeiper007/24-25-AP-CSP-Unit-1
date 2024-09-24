@@ -4,7 +4,7 @@
 total = 0
 
 while total + 11 <= 852:
-    total = total + 11
+    total += 11
 
 print("Your total is: " + str(total))
 print("Which is as high as you can go")
