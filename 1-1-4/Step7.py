@@ -1,5 +1,4 @@
 #   a114_while_guess.py
-
 import turtle as trtl
 
 # modify with your two favorite colors
