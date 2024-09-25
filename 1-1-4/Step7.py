@@ -8,7 +8,7 @@ color2 = "green"
 
 wn = trtl.Screen()
 # the radius of the shape
-height = 50
+height = 600
 
 painter = trtl.Turtle()
 painter.speed(0)
@@ -22,7 +22,7 @@ while (painter.ycor() < height):
   if (space % 10 <= 5):
     painter.fillcolor(color1)
     painter.color(color1)
-  elif (space % 10 >= 5):
+  elif (space % 10 >= 6):
     painter.fillcolor(color2)
     painter.color(color2)
 
