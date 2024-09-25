@@ -15,14 +15,14 @@ painter.speed(0)
 painter.color(color1)
 
 space = 1
-angle = 65 # experiment with the shape
+angle = 75 # experiment with the shape
 seg = int(360/angle)
 
 while (painter.ycor() < height):
   if (space % 10 <= 5):
     painter.fillcolor(color1)
     painter.color(color1)
-  elif (space % 10 >= 6):
+  elif (space % 10 >= 5):
     painter.fillcolor(color2)
     painter.color(color2)
 
