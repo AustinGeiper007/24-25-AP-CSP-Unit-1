@@ -19,6 +19,7 @@ angle = 75 # experiment with the shape
 seg = int(360/angle)
 
 while (painter.ycor() < height):
+  # Color switching done here
   if (space % 10 <= 5):
     painter.fillcolor(color1)
     painter.color(color1)
