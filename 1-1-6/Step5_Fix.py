@@ -1,5 +1,6 @@
 #   a116_buggy_image.py
 #   1.1.6 Step 5 After fixing
+#   This program draws a little spider :)
 import turtle as trtl
 # instead of a descriptive name of the turtle such as painter,
 # a less useful variable name x is used
@@ -8,9 +9,9 @@ painter = trtl.Turtle()
 painter.pensize(40)
 painter.circle(20)
 
-legCount = 6
+legCount = 8
 length = 70
-legAngle = 380 / legCount
+legAngle = 360 / legCount
 
 painter.pensize(5)
 
