@@ -6,7 +6,7 @@ ladybug = trtl.Turtle()
 ladybug.pensize(40)
 ladybug.circle(5)
 
-# Draw legs on the bug (Not in Step33)
+# Draw legs on the ladybug (Not in Step33)
 ladybug.pensize(4)
 ladybug.penup()
 ladybug.goto(0, -40)
