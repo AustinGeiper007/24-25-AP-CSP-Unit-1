@@ -1,2 +1,4 @@
-new_list = ["dog", "cat", "mouse", "bird", "monkey", "elephant"]
-print(new_list)
+new_list = ["dog", "cat", "mouse", "bird", "monkey"]
+
+for id in range(5):
+    print(new_list[id])
