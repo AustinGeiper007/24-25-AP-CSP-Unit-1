@@ -19,6 +19,9 @@ spider.circle(10)
 #legs
 spider.pensize(5)
 
+
+# Spider currently only has 2 legs
+# add another loop and some variables to add legss
 for num2 in range(2):
     if num2%2 == 0:
         z = 1
