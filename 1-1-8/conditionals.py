@@ -17,8 +17,7 @@ def add_grade():
 
 def remove_grade():
     print("The following are your grades.  If you wish to simply delete the last one, enter -1")
-    for grade in grades:
-        print(grade)
+    show_grades()
     delete_grade = int(input("Which index would you like to delete?"))
     if delete_grade == -1:
         print("You deleted the grade: " + str(grades.pop()))
