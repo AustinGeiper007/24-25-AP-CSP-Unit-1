@@ -1,4 +1,3 @@
-
 status = True
 grades = [67, 95, 88, 42, 99, 77]
 
