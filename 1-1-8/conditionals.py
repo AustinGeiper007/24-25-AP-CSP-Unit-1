@@ -50,3 +50,5 @@ while(status):
         exit_program()
     else:
         print("Please read the menu carefully and select a valid option.")
+
+print("Thank you for using our program.  Have a great day!")
