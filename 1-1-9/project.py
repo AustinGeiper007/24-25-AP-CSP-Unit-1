@@ -1,5 +1,6 @@
 import turtle as trtl
 import random as rd
+from random import randint
 
 # sky code here (makes background with just a really big circle)
 # Finished
@@ -11,7 +12,7 @@ sky.circle(100)
 sky.hideturtle()
 
 # sun code
-# Finished
+# Finished (except smiley face :))
 sun = trtl.Turtle()
 sun.hideturtle()
 sun.speed(0)
@@ -23,17 +24,21 @@ sun.goto(-400, 300)
 sun.pendown()
 sun.showturtle()
 sun.circle(5)
-# Rays
+# Code for sun rays
 sun.pensize(5)
-for ray in range(8):
+# sray is shorthand for sun ray
+for sray in range(8):
     sun.hideturtle()
     sun.penup()
     sun.goto(-400, 305)
-    sun.setheading((ray * 45) + 10)
+    sun.setheading((sray * 45) + 10)
     sun.forward(60)
     sun.pendown()
     sun.showturtle()
-    sun.forward(30)
+    if sray%2 == 0:
+        sun.forward(40)
+    else:
+        sun.forward(25)
 sun.hideturtle()
 
 # ground code
@@ -41,6 +46,7 @@ sun.hideturtle()
 grass = trtl.Turtle()
 grass.hideturtle()
 grass.speed(0)
+# hex code #3f9b0b is a pretty nice grass color
 grass.color('#3f9b0b')
 grass.pensize(250)
 grass.penup()
