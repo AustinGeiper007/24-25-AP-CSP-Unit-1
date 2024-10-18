@@ -40,6 +40,12 @@ for sray in range(8):
     else:
         sun.forward(25)
 sun.hideturtle()
+# Code for sun smiley face
+sun.color('black')
+sun.penup()
+sun.goto(-395, 320)
+sun.pendown()
+sun.circle(5)
 
 # ground code
 #Finished
@@ -57,17 +63,38 @@ grass.forward(1000)
 grass.hideturtle()
 
 #cloud code
+# cloud set-up
 cloud = trtl.Turtle()
 cloud.color('white')
 cloud.pensize(50)
-cloud.penup()
-cloud.goto(400, 300)
+x = 400
+y = 300
+
+for puff in range(5):
+    cloud.penup()
+    cloud.goto(400, 300)
+    cloud.pendown()
+    cloud.circle(5)
+
+'''cloud.penup()
+cloud.goto(360, 300)
 cloud.pendown()
 cloud.circle(5)
+
 cloud.penup()
-cloud.goto(360, 310)
+cloud.goto(350, 340)
 cloud.pendown()
 cloud.circle(5)
+
+cloud.penup()
+cloud.goto(370, 340)
+cloud.pendown()
+cloud.circle(5)
+
+cloud.penup()
+cloud.goto(400, 340)
+cloud.pendown()
+cloud.circle(5)'''
 
 # house code
 house = trtl.Turtle()
