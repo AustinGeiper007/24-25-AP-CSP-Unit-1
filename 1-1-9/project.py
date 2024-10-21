@@ -43,9 +43,20 @@ sun.hideturtle()
 # Code for sun smiley face
 sun.color('black')
 sun.penup()
-sun.goto(-395, 320)
+sun.goto(-385, 320)
 sun.pendown()
-sun.circle(5)
+sun.circle(3)
+sun.penup()
+sun.goto(-420, 320)
+sun.pendown()
+sun.circle(3)
+# draw mouth
+sun.penup()
+sun.goto(-420, 300)
+sun.down()
+sun.right(60)
+sun.circle(20, 180)
+sun.up()
 
 # ground code
 #Finished
@@ -64,37 +75,37 @@ grass.hideturtle()
 
 #cloud code
 # cloud set-up
-cloud = trtl.Turtle()
-cloud.color('white')
-cloud.pensize(50)
+global cloudpen
+cloudpen = trtl.Turtle()
+cloudpen.color('white')
+cloudpen.speed(0)
+global x
+global y
+
+# Defining the cloud function
+def drawcloud():
+    global x,y
+    global cloudpen
+    for puff in range(5):
+        # The next 2 variables help to randomize the clouds a little bit
+        variancex = randint(-10, 5)
+        variancey = randint(-10, 0)
+        cloudpen.penup()
+        cloudpen.goto(x, y)
+        cloudpen.pendown()
+        cloudpen.pensize(50 + randint(0, 10))
+        cloudpen.circle(5)
+        x = x + variancex - 20
+        if puff%2 == 0:
+            y = 340 + variancey
+        else:
+            y = 300 + variancey
+
+#DRAW THE CLOUD
+# Initial coords
 x = 400
 y = 300
-
-for puff in range(5):
-    cloud.penup()
-    cloud.goto(400, 300)
-    cloud.pendown()
-    cloud.circle(5)
-
-'''cloud.penup()
-cloud.goto(360, 300)
-cloud.pendown()
-cloud.circle(5)
-
-cloud.penup()
-cloud.goto(350, 340)
-cloud.pendown()
-cloud.circle(5)
-
-cloud.penup()
-cloud.goto(370, 340)
-cloud.pendown()
-cloud.circle(5)
-
-cloud.penup()
-cloud.goto(400, 340)
-cloud.pendown()
-cloud.circle(5)'''
+drawcloud()
 
 # house code
 house = trtl.Turtle()
