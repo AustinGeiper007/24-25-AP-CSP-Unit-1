@@ -46,11 +46,12 @@ sun.penup()
 sun.goto(-385, 320)
 sun.pendown()
 sun.circle(3)
+#eye
 sun.penup()
 sun.goto(-420, 320)
 sun.pendown()
 sun.circle(3)
-# draw mouth
+#mouth
 sun.penup()
 sun.goto(-420, 300)
 sun.down()
@@ -74,6 +75,7 @@ grass.forward(1000)
 grass.hideturtle()
 
 #cloud code
+# Finished
 # cloud set-up
 global cloudpen
 cloudpen = trtl.Turtle()
@@ -97,15 +99,17 @@ def drawcloud():
         cloudpen.circle(5)
         x = x + variancex - 20
         if puff%2 == 0:
-            y = 340 + variancey
+            y = y + 40 + variancey
         else:
-            y = 300 + variancey
+            y = y - 40 + variancey
 
 #DRAW THE CLOUD
-# Initial coords
-x = 400
-y = 300
-drawcloud()
+cloud_start_xcoords = [400, 100, -200]
+cloud_start_ycoords = [300, 150, 225]
+for clouds in range(3):
+   x = cloud_start_xcoords[clouds]
+   y = cloud_start_ycoords[clouds]
+   drawcloud()
 
 # house code
 house = trtl.Turtle()
