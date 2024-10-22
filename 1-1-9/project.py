@@ -2,7 +2,7 @@ import turtle as trtl
 import random as rd
 from random import randint
 
-# sky code here (makes background with just a really big circle)
+# sky code here (makes background with just a big circle)
 # Finished
 sky = trtl.Turtle()
 sky.speed(0)
@@ -102,7 +102,6 @@ def drawcloud():
             y = y + 40 + variancey
         else:
             y = y - 40 + variancey
-
 #DRAW THE CLOUD
 cloud_start_xcoords = [400, 100, -200]
 cloud_start_ycoords = [300, 150, 225]
@@ -113,10 +112,42 @@ for clouds in range(3):
 
 # house code
 house = trtl.Turtle()
+house.color('#000000')
+house.pensize(3)
+house.speed(0)
+house.penup()
+house.goto(-175, -225)
+house.pendown()
+house.setheading(90)
+house.begin_fill()
+for wall in range(4):
+    house.forward(200)
+    house.right(90)
+house.fillcolor('#f0f0d7')
+house.end_fill()
+
+# window
+house.color('#000000')
+house.speed(0)
+house.fillcolor('#40e6ff')
+pane_startx = [-150, -150, -120, -120]
+pane_starty = [-175, -125, -175, -125]
+for pane in range(4):
+    house.begin_fill()
+    house.penup()
+    house.goto(pane_startx[pane], pane_starty[pane])
+    house.pendown()
+    for sill in range(4):
+        if sill%2 == 0:
+            dist = 50
+        else:
+            dist = 30
+        house.forward(dist)
+        house.right(90)
+    house.end_fill()
 
 
-
-
+# door
 
 # the loop stuff to keep it there
 wn = trtl.Screen()
