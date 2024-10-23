@@ -39,15 +39,12 @@ for sray in range(8):
 sun.hideturtle()
 ########### Code for sun smiley face
 sun.color('black')
-sun.penup()
-sun.goto(-385, 320)
-sun.pendown()
-sun.circle(3)
-########### eye
-sun.penup()
-sun.goto(-420, 320)
-sun.pendown()
-sun.circle(3)
+eyexcoord = [-385, -420]
+for eye in range(2):
+    sun.penup()
+    sun.goto(eyexcoord[eye], 320)
+    sun.pendown()
+    sun.circle(3)
 ########### mouth
 sun.penup()
 sun.goto(-420, 300)
