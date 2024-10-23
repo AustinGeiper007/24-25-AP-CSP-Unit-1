@@ -1,9 +1,10 @@
+import math
 import turtle as trtl
 import random as rd
 from random import randint
 
-# sky code here (makes background with just a big circle)
-# Finished
+########### sky code here (makes background with just a big circle)
+########### Finished
 sky = trtl.Turtle()
 sky.speed(0)
 sky.color('#00a6ff')
@@ -11,22 +12,22 @@ sky.pensize(5000)
 sky.circle(100)
 sky.hideturtle()
 
-# sun code
-# Finished (except smiley face :))
+########### sun code
+########### Finished
 sun = trtl.Turtle()
 sun.hideturtle()
 sun.speed(0)
 sun.pensize(75)
 sun.color('yellow')
-# Set up sun
+########### Set up sun
 sun.penup()
 sun.goto(-400, 300)
 sun.pendown()
 sun.showturtle()
 sun.circle(5)
-# Code for sun rays
+########### Code for sun rays
 sun.pensize(5)
-# sray is shorthand for sun ray
+########### sray is shorthand for sun ray
 for sray in range(8):
     sun.hideturtle()
     sun.penup()
@@ -40,18 +41,18 @@ for sray in range(8):
     else:
         sun.forward(25)
 sun.hideturtle()
-# Code for sun smiley face
+########### Code for sun smiley face
 sun.color('black')
 sun.penup()
 sun.goto(-385, 320)
 sun.pendown()
 sun.circle(3)
-#eye
+########### eye
 sun.penup()
 sun.goto(-420, 320)
 sun.pendown()
 sun.circle(3)
-#mouth
+########### mouth
 sun.penup()
 sun.goto(-420, 300)
 sun.down()
@@ -59,12 +60,12 @@ sun.right(60)
 sun.circle(20, 180)
 sun.up()
 
-# ground code
-#Finished
+########### ground code
+########### Finished
 grass = trtl.Turtle()
 grass.hideturtle()
 grass.speed(0)
-# hex code #3f9b0b is a pretty nice grass color
+########### hex code #3f9b0b is a pretty nice grass color
 grass.color('#3f9b0b')
 grass.pensize(250)
 grass.penup()
@@ -74,9 +75,9 @@ grass.showturtle()
 grass.forward(1000)
 grass.hideturtle()
 
-#cloud code
-# Finished
-# cloud set-up
+########### cloud code
+########### Finished
+########### cloud set-up
 global cloudpen
 cloudpen = trtl.Turtle()
 cloudpen.color('white')
@@ -84,7 +85,8 @@ cloudpen.speed(0)
 global x
 global y
 
-# Defining the cloud function
+
+########### Defining the cloud function
 def drawcloud():
     global x,y
     global cloudpen
@@ -102,7 +104,7 @@ def drawcloud():
             y = y + 40 + variancey
         else:
             y = y - 40 + variancey
-#DRAW THE CLOUD
+########### DRAW THE CLOUD
 cloud_start_xcoords = [400, 100, -200]
 cloud_start_ycoords = [300, 150, 225]
 for clouds in range(3):
@@ -110,7 +112,7 @@ for clouds in range(3):
    y = cloud_start_ycoords[clouds]
    drawcloud()
 
-# house code
+########### house code
 house = trtl.Turtle()
 house.color('#000000')
 house.pensize(3)
@@ -125,8 +127,7 @@ for wall in range(4):
     house.right(90)
 house.fillcolor('#f0f0d7')
 house.end_fill()
-
-# window
+########### window
 house.color('#000000')
 house.speed(0)
 house.fillcolor('#40e6ff')
@@ -145,10 +146,54 @@ for pane in range(4):
         house.forward(dist)
         house.right(90)
     house.end_fill()
+########### door
+house.fillcolor('#ff0000')
+house.penup()
+house.goto(-50, -225)
+house.pendown()
+house.setheading(90)
+house.begin_fill()
+for houseside in range(4):
+    if houseside%2 == 0:
+        x = 100
+    else:
+        x = 50
+    house.forward(x)
+    house.right(90)
+house.end_fill()
+#doorknob
+house.color('#ffff00')
+house.penup()
+house.goto(-5, -175)
+house.pendown()
+house.fillcolor('#ffff00')
+house.begin_fill()
+house.circle(4)
+house.end_fill()
+
+# roof
+househypot = (100 / math.cos(math.pi / 4)) + 5 * math.sqrt(2)
+# shorthand for house hypotenuse
+house.color('#000000')
+house.fillcolor('#800000')
+house.penup()
+house.goto(-180, -30)
+house.pendown()
+house.begin_fill()
+house.right(45)
+house.forward(househypot)
+house.right(90)
+house.forward(househypot)
+house.goto(-180, -30)
+house.end_fill()
 
 
-# door
 
-# the loop stuff to keep it there
+
+
+
+
+
+########### the loop stuff to keep it there
 wn = trtl.Screen()
 wn.mainloop()
