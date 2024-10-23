@@ -179,6 +179,7 @@ house.right(90)
 house.forward(househypot)
 house.goto(-180, -30)
 house.end_fill()
+house.hideturtle()
 
 # the loop stuff to keep it there
 wn.mainloop()
