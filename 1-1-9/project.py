@@ -3,14 +3,10 @@ import turtle as trtl
 import random as rd
 from random import randint
 
-########### sky code here (makes background with just a big circle)
+########### sky code here
 ########### Finished
-sky = trtl.Turtle()
-sky.speed(0)
-sky.color('#00a6ff')
-sky.pensize(5000)
-sky.circle(100)
-sky.hideturtle()
+wn = trtl.Screen()
+wn.bgcolor('#00a6ff')
 
 ########### sun code
 ########### Finished
@@ -187,13 +183,5 @@ house.forward(househypot)
 house.goto(-180, -30)
 house.end_fill()
 
-
-
-
-
-
-
-
-########### the loop stuff to keep it there
-wn = trtl.Screen()
+# the loop stuff to keep it there
 wn.mainloop()
