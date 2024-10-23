@@ -62,10 +62,10 @@ grass.speed(0)
 grass.color('#3f9b0b')
 grass.pensize(250)
 grass.penup()
-grass.goto(-500, -350)
+grass.goto(-5000, -350)
 grass.pendown()
 grass.showturtle()
-grass.forward(1000)
+grass.forward(10000)
 grass.hideturtle()
 
 ########### cloud code
